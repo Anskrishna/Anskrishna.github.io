@@ -253,11 +253,18 @@ var msgs =document.getElementById("msgs");
 if (inv.style.display=="block"){
     inv.style.display="none"
 document.getElementById("clock").style.display="block"
-msgs.style.display="none"
 }
 else{inv.style.display="block"
 document.getElementById("clock").style.display="none"
-msgs.style.display="none"
+}
+}
+var msgs =document.getElementById("msgs");
+var ask =prompt("congratulation!")
+if(ask=="kcubetermet"){
+    msgs.style.display="block"
+}
+else{
+    msgs.style.display="none"
 }
 }
 }
