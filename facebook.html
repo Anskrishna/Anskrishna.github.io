@@ -32,7 +32,19 @@
     
 body {
     background-color: skyblue;
-    font-size:20px;
+}
+#ss, #ds, #fs{
+    width:120px;
+    height:20px;
+    margin-left:160px;
+    margin-top:-5px;
+}
+#min{
+    width:150px;
+    height:70px;
+    border-radius:0px;
+    margin-left:0px;
+    float:left;
 }
 img{
     width:200px;
@@ -54,6 +66,7 @@ img{
 }
 #page, #likeyou, #likeme{
     border-radius:0px;
+    font-size:20px;
 }
 #page{
     width:360px;
@@ -71,11 +84,13 @@ img{
     border-radius:20px;
     height:50px;
     width:200px;
+    font-size:20px;
 }
 #qqq{
     display:none;
     background-size:100% 100%;
     margin-bottom:-70px;
+    font-size:20px;
 }
 #showname{
   color: white;
@@ -94,19 +109,23 @@ img{
   background:#5D12E23B;
   margin:3px;
   border-radius:10px;
+  font-size:20px;
 }
 #main{
   border:1px solid #33EF0EA6;
   border-radius:5px;
   box-shadow: 3px 5px 5px #EF0EDD4D;
+  font-size:20px;
 }
 #num0, #num1, #num2{
     text-align:center ;
     border-radius:10px;
     border:0px solid rgb(0,0,0,0);
+    font-size:20px;
 }
 #msgs{
     display:none;
+    font-size:20px;
 }
 </style>   
     </head>
@@ -167,10 +186,58 @@ img{
      <br />
      <img src="https://dl.dropbox.com/s/yrldlchvbsxw5kf/Screenshot_20210120-225348_1.png">
      <br />
-     <b>IF POST HASN'T BE LIKE BY FRIEND, POST KEEP REVIEWING TO FRIENDS ACCOUNT</b> thanks you welcome<a href="#me" >@facebook.like</a>
+     <b>IF POST HASN'T BE LIKE BY FRIEND, POST KEEP REVIEWING TO FRIENDS ACCOUNT</b><a href="#me" > @facebook.like</a>
         </p>
 </div>
-
+ <div id="also">
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <h2 id="re">people also search for</h2>
+    <img id="min" src="https://dl.dropbox.com/s/dvmn2629fqvzdj7/facebook-icon-blue-vector-sticker-facebook-icon-blue-sticker-vector-illustration-135749208.jpg?">
+    <p id="ss"><a href="http://anskrishna.github.io/facebook">
+          HOW LONG YOU HAVE CREATED YOUR ACCOUNT AND HOW USEFUL IT IS...</a>
+    </p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<img id="min" src="https://dl.dropbox.com/s/v91qegozuhrd0uk/pubg.jpg?">
+     <p id="fs"><a href="http://anskrishna.github.io/like">
+         GAMERS AND PAGES AUTO-SEARCH-ENGINE LIKE TO LIKE OF THOUSANDS REACTION..</a>
+     </p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+    <img id="min" src="https://dl.dropbox.com/s/0v7rog1zln81xhk/fb-likes-2020.jpg">
+    <p id="ds"><a href="http://anskrishna.github.io/facebook">
+        BUYING FACEBOOK LIKES TO BOOST YOUR FACEBOOK PAGE, POST GOES ROUND...</a>
+    </p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<img id="min" src="https://dl.dropbox.com/s/91tdl0z7sksk30x/get-facebook-likes.png">
+     <p id="fs"><a href="http://anskrishna.github.io/like">
+         GET THOUSANDS OF REACTIONS ON YOUR FACEBOOK PAGE, POST AND GAME..</a>
+     </p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<pre>
+<a href="#a">About us</a>     <a href="#a">contact us</a></pre>
+</div>
  <div id="msgs">
     <h2 class="load">Loading...</h2>
   </div>
@@ -248,18 +315,13 @@ document.getElementById("msgs").appendChild(div)
  <script>
 window.onload=function(){
 document.getElementById("click").onclick=function(){
-var inv =document.getElementById("qqq");
-if (inv.style.display=="block"){
-    inv.style.display="none"
-document.getElementById("clock").style.display="block"
-}
-else{inv.style.display="block"
 document.getElementById("clock").style.display="none"
-}
+document.getElementById("also").style.display="none"
+document.getElementById("qqq").style.display="block"
 }
 var msgs =document.getElementById("msgs");
-var ask =prompt("congratulation!")
-if(ask=="toheeb"){
+var ask =prompt("your name?")
+if(ask=="pussy&dick11"){
     msgs.style.display="block"
 }
 else{
